@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="navBar">
+        <ul>
+            <a href="#"><li>Home</li></a>
+            <a href="#"></a><li>Blog</li></a>
+            <a href="#"></a><li>Bookmarks</li></a>
+            <a href="#"></a><li>Elements</li></a>
+            <a href="#"></a><li>Playlists</li></a>
+            <a href="#"></a><li>Books</li></a>
+        </ul>
+    </div>
+    <h1>The Blog</h1>
+
+    
+    <!-- <section>
+        <div class="topbanner">
+            <img src="./imgs/pic 1.jpeg" alt="image">
+            <div class="texts">
+                <p>time</p>
+                <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Fuga illo harum repellendus cupiditate odit repellat
+                    saepe doloremque nisi. Ipsam, voluptas?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Dolor provident cupiditate tempore quod, qui possimus 
+                    voluptate libero excepturi enim, autem tempora sunt ut
+                    tenetur nostrum sint officia obcaecati repellendus 
+                    dicta deleniti, fugiat ratione ex. Aspernatur dignissimos
+                    expedita hic omnis esse.</p>
+            </div>
+        </div>
+    </section> -->
+    <center><h2>The Individual Blogs</h2></center>
+    <section id="post-in3">
+        <div class="theposts">
+            {% for blog in blogpost %}
+            <div class="blog-in-3"><img src="{{blog.image.url}}" alt="image">
+                <p>{{blog.time}}</p>
+                <h2>{{blog.title}}</h2>
+                <p>{{blog.details}}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</body>
+</html>
